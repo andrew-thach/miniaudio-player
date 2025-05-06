@@ -1,11 +1,16 @@
-player: main.o miniaudio.o
-	g++ -o player main.o miniaudio.o -ldl -lpthread -lm
+BUILD_DIR = build
 
-main.o: main.cpp miniaudio.c miniaudio.h
-	g++ -c main.cpp
+player: $(BUILD_DIR)/main.o $(BUILD_DIR)/miniaudio.o
+	g++ -o player $(BUILD_DIR)/main.o $(BUILD_DIR)/miniaudio.o -ldl -lpthread -lm
 
-miniaudio.o:
-	g++ -c miniaudio.c
+$(BUILD_DIR)/main.o: main.cpp miniaudio/miniaudio.c miniaudio/miniaudio.h | $(BUILD_DIR)
+	g++ -c main.cpp -o $(BUILD_DIR)/main.o
+
+$(BUILD_DIR)/miniaudio.o:
+	g++ -c miniaudio/miniaudio.c -o $(BUILD_DIR)/miniaudio.o
+
+$(BUILD_DIR):
+	mkdir -p $@
 
 clean:
-	rm -f player *.o *~
+	rm -rf player $(BUILD_DIR)

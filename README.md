@@ -1,9 +1,10 @@
 # miniaudio-player
 This repo hosts starter code that plays a [WAV-formatted](https://en.wikipedia.org/wiki/WAV) audio file using [miniaudio](https://miniaud.io/), a cross-platform library that supports audio playback and capture.
 
+The library consists of a single source file [miniaudio.h](miniaudio/miniaudio.h), sourced from the original author's [repository](https://github.com/mackron/miniaudio).
+
 # Compilation
 
-The library is made of a single source file [miniaudio.h](miniaudio.h), provided in this repository.
 
 A Makefile has been provided, to simplify and speed up compilation.
 
@@ -12,7 +13,7 @@ make
 ```
 
 # Running the program.
-The compilation produces an executable ```player```. To run it:
+The Makefile produces an executable ```player```. To run it:
 
 ```bash
 ./player

@@ -1,7 +1,7 @@
 // Sources: 
 //     https://github.com/mackron/miniaudio?tab=readme-ov-file#examples
 //     https://miniaud.io/docs/manual/
-#include "miniaudio.h"
+#include "miniaudio/miniaudio.h"
 
 #include <iostream>
 
