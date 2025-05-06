@@ -15,7 +15,7 @@ int main() {
         return -1;
     }
 
-    ma_engine_play_sound(&engine, "sample-6s.wav", NULL);
+    ma_engine_play_sound(&engine, "sample-0.wav", NULL);
 
     std::cout << "Press enter to quit...";
     getchar();
