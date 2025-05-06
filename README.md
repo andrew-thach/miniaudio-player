@@ -3,7 +3,19 @@ This repo hosts starter code that plays a [WAV-formatted](https://en.wikipedia.o
 
 The library consists of a single source file [miniaudio.h](miniaudio/miniaudio.h), sourced from the original author's [repository](https://github.com/mackron/miniaudio).
 
-# Compilation
+# Getting Started
+Clone this repo along with its submodules:
+
+```bash
+git clone --recurse-submodules https://github.com/andrew-thach/miniaudio-player.git
+```
+
+Navigate to the repo:
+```bash
+cd miniaudio-player
+```
+
+## Compilation
 
 
 A Makefile has been provided, to simplify and speed up compilation.
@@ -12,7 +24,7 @@ A Makefile has been provided, to simplify and speed up compilation.
 make
 ```
 
-# Running the program.
+## Running the program.
 The Makefile produces an executable ```player```. To run it:
 
 ```bash
